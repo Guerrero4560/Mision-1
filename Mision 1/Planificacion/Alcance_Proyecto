@@ -1,0 +1,18 @@
+Objetivo:
+
+    Crear una plataforma donde los usuarios puedan ver y/o comprar los dieferentes modelos de zapatos
+
+Funcionamiento clave:
+
+    Visualizacion de los productos.
+    Tienda online.
+    Formulario de registro.
+    Atencion al cliente.
+    Informacion de contacto.
+    Seccion de comenbtarios y/o reseñas
+
+Limites:
+
+    Tienda no funcional (no se podran realizar compras pero si se podra interactuar)
+    Formulario de registro (no almacenara datos reales ya que no se incluira una base de datos)
+    Solo sera una plataforma interactiva
