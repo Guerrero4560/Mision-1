@@ -34,7 +34,7 @@ img {
 .panel_navbar {
     display: flex; 
     align-items: center; 
-    background-color: rgba(255, 255, 255, 0.8);
+    background-color: rgba(255, 255, 255, 0.9);
     padding: 0.8%; 
     border-radius: 20px; 
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
@@ -66,14 +66,14 @@ img {
 
 }
 
-.menu_items {
+.menu_items_navbar {
     display: flex; 
     justify-content: center; 
     width: 100%; 
   
 }
 
-.menu_items p:hover {
+.menu_items_navbar p:hover {
     color: black; 
 }
 
@@ -95,6 +95,55 @@ img {
 }
 
 /*End MenuBar*/
+
+
+/*Full-Screen-Background*/
+
+
+.video-background {
+    position: relative;
+    width: 100%;
+    height: 95vh;
+    overflow: hidden;
+  }
+  
+  .video-background::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('https://media1.tenor.com/m/5tqd8cBhC5oAAAAC/nike-niketn.gif') center/cover no-repeat;
+    filter: brightness(0.5);
+  }
+  
+.content-video-background {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    display: flex;
+    flex-direction: column; 
+    align-items: flex-start; 
+    padding: 20px;
+    width: auto;
+    height: auto;
+}
+
+.content-video-background h1 {
+    color: orange; 
+    font-size: 3.5rem; 
+    margin: 0;
+}
+
+.content-video-background h2 {
+    color: #fff; 
+    font-size: 1.2rem; 
+    margin: 0;
+    margin-top: 5px; 
+}
+  
+/*End Full-Screen-Background*/
 
 /* Header */
 header {
