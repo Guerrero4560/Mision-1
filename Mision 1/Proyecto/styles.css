@@ -298,3 +298,10 @@ header {
     padding: 15px 10px;
     cursor: pointer;
 }
+
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 1em;
+}
