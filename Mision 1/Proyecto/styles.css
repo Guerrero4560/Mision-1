@@ -153,3 +153,31 @@
 .logo-item.selected .logo-name {
     visibility: visible;
 }
+
+
+/*Carrusel */
+.carousel-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px; /* Ajusta el margen superior */
+    overflow-x: auto; /* Permitir el desplazamiento horizontal */
+}
+
+.carousel-images {
+    display: flex;
+    gap: 10px; /* Espaciado entre imágenes */
+}
+
+.carousel-image {
+    width: 100px; /* Ajusta el tamaño de las imágenes del carrusel */
+    height: auto;
+    border-radius: 5px; /* Bordes redondeados (opcional) */
+    transition: transform 0.3s; /* Efecto de transición */
+}
+
+.carousel-image:hover {
+    transform: scale(1.1); /* Aumenta el tamaño al pasar el mouse */
+}
+
+

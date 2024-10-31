@@ -18,33 +18,65 @@ document.addEventListener("DOMContentLoaded", function () {
     };
 
     const logoItems = document.querySelectorAll(".logo-item");
+    const carouselImages = document.getElementById("carousel-images");
 
-    logoItems.forEach(item => {
+    logoItems.forEach((item) => {
         const img = item.querySelector(".logo-animated");
         const span = item.querySelector(".logo-name");
 
-        img.addEventListener("click", () => {
+        img.addEventListener("click", function () {
             resetLogos();
-            selectLogo(img, item, span);
+            selectLogo(this, item, span);
+            loadImagesForLogo(img.id); 
         });
     });
 
     function resetLogos() {
-        logoItems.forEach(otherItem => {
+        logoItems.forEach((otherItem) => {
             const otherImg = otherItem.querySelector(".logo-animated");
             const otherSpan = otherItem.querySelector(".logo-name");
 
             otherItem.classList.remove("selected");
             otherImg.src = logos[otherImg.id].original;
-            otherSpan.textContent = ""; 
-            otherSpan.style.visibility = "hidden"; 
+            otherSpan.textContent = "";
+            otherSpan.style.visibility = "hidden";
+            otherImg.style.width = "120px";
         });
+
+        carouselImages.innerHTML = "";
     }
 
     function selectLogo(img, item, span) {
         img.src = logos[img.id].selected;
         item.classList.add("selected");
         span.textContent = logos[img.id].name;
-        span.style.visibility = "visible"; 
+        span.style.visibility = "visible";
+        img.style.width = "120px";
+    }
+
+    function loadImagesForLogo(logoId) {
+        const logoFolder = `/Mision 1/Imagenes_Videos/${logoId}/`; 
+        const imageNames = [ "image1.jpeg","image2.jpeg","image3.jpeg"]; // Asegúrate de que las imágenes se llamen así
+        
+        carouselImages.innerHTML = ""; // Limpiar el carrusel
+
+        imageNames.forEach(image => {
+            const imgUrl = logoFolder + image;
+            
+            fetch(imgUrl)
+                .then(response => {
+                    if (response.ok) {
+                        const imgElement = document.createElement("img");
+                        imgElement.src = imgUrl; // Crea la ruta completa
+                        imgElement.alt = `${logos[logoId].name} Image`;
+                        imgElement.className = "carousel-image"; 
+                        carouselImages.appendChild(imgElement);
+                    }
+                })
+                .catch(error => {
+                    console.error(`Error al cargar la imagen: ${imgUrl}`, error);
+                    // No hacer nada si hay un error, solo se omite la imagen
+                });
+        });
     }
 });
