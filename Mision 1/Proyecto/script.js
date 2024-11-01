@@ -56,7 +56,7 @@ document.addEventListener("DOMContentLoaded", function () {
             otherImg.src = logos[otherImg.id].original;
             otherSpan.textContent = "";
             otherSpan.style.visibility = "hidden";
-            otherImg.style.width = "120px";
+            otherImg.style.width = "10vh";
         });
 
         carouselImages.innerHTML = "";
@@ -68,7 +68,7 @@ document.addEventListener("DOMContentLoaded", function () {
         item.classList.add("selected");
         span.textContent = logos[img.id].name;
         span.style.visibility = "visible";
-        img.style.width = "120px";
+        img.style.width = "10vh";
     }
     function loadImagesForLogo(logoId) {
         const logoData = logos[logoId];

@@ -24,6 +24,8 @@
     transform: translate(-50%, 0);
     width: 50%;
     z-index: 1000;
+    
+
 }
 
 .logo_navbar {
@@ -123,6 +125,7 @@
     width: 100%;
     position: relative;
     z-index: 10;
+    
 }
 
 .logo-item {
@@ -132,7 +135,7 @@
 }
 
 .logo-animated {
-    width: 120px; 
+    width: 10vh; 
     height: auto;
     transition: transform 0.3s ease, width 0.3s ease, opacity 0.3s ease;
     cursor: pointer;
@@ -160,24 +163,25 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-top: 20px; /* Ajusta el margen superior */
-    overflow-x: auto; /* Permitir el desplazamiento horizontal */
+    margin-top: 20px; 
+    overflow-x: auto; 
+ 
 }
 
 .carousel-images {
     display: flex;
-    gap: 150px; /* Espaciado entre imágenes */
+    gap: 150px; 
 }
 
 .carousel-image {
-    width: 100px; /* Ajusta el tamaño de las imágenes del carrusel */
+    width: 100px; 
     height: auto;
-    border-radius: 5px; /* Bordes redondeados (opcional) */
-    transition: transform 0.3s; /* Efecto de transición */
+    border-radius: 5px; 
+    transition: transform 0.3s; 
 }
 
 .carousel-image:hover {
-    transform: scale(1.1); /* Aumenta el tamaño al pasar el mouse */
+    transform: scale(1.1); 
 }
 
 
@@ -196,21 +200,21 @@
 }
 
 .card:hover {
-    transform: scale(1.05); /* Efecto al pasar el mouse */
+    transform: scale(1.05); 
 }
 
 .card img {
-    width: 250px; /* Ajusta el tamaño de las imágenes de las tarjetas */
-    height: 250px; /* Altura fija para todas las imágenes */
-    object-fit: cover; /* Asegura que la imagen cubra el espacio sin distorsionarse */
+    width: 250px; 
+    height: 250px; 
+    object-fit: cover; 
     border-radius: 5px;
-    margin-bottom: 5px; /* Espaciado inferior */
+    margin-bottom: 5px;
 }
 
 .card .product-name {
     font-weight: bold;
     color: var(--color-text);
-    margin: 5px 0; /* Margen superior e inferior */
+    margin: 5px 0; 
 }
 
 .card .product-price {
@@ -222,6 +226,7 @@
     background-color: #f5f5f5;
     text-align: center;
     padding: 2em;
+    align-items: center;
 }
 
 .iconos {
@@ -255,7 +260,7 @@
     
 }
 .contact-box {
-    width: 400px; /* Ajusta según lo que necesites */
+    width: 400px; 
     padding: 10px;
     text-align: center;
     border: 1px solid #ccc;
@@ -285,8 +290,10 @@
 
 .imagenes-aliados {
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
+    flex-wrap: wrap;
     margin: 1em 0;
+   
 }
 
 .alianzas {
@@ -298,6 +305,7 @@
     text-align: center;
     font-size: 2.5rem;
     font-weight: bold;
+    margin-bottom: 1em;
 }
 .fuente2{
     
@@ -312,4 +320,134 @@ footer {
     color: white;
     text-align: center;
     padding: 1em;
+}
+
+.icon {
+    width: 40px; /* Ajustar según el tamaño deseado */
+    height: 40px; /* Ajustar según el tamaño deseado */
+    border-radius: 50%; /* Opcional: hace que los iconos sean circulares */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden; /* Asegura que no se desborden */
+}
+
+.icon img {
+    width: 100%; /* Asegura que la imagen ocupe todo el espacio del div */
+    height: auto; /* Mantiene la proporción de la imagen */
+}
+
+@media (max-width: 480px) {
+    
+    .panel_navbar {
+        width: 70%; 
+        flex-direction: column; 
+        align-items: center; 
+        display: flex;
+        justify-content: center; 
+        transform: translate(-50%, 0);
+        top: 6%;
+    }
+
+    .carousel-images {
+        gap: 20px; 
+        width: 100px; 
+    }
+
+    .logos-container{
+        margin: 0 auto; 
+        width: 80%;
+        justify-content: center;
+        align-items: center;
+        gap: 10px; 
+    }
+ 
+    .content-video-background h1 {
+        font-size: 2rem; /* Reducir tamaño del título */
+    }
+
+    .content-video-background h2 {
+        font-size: 1rem; /* Reducir tamaño del subtítulo */
+    }
+
+    .logos-container {
+        flex-direction: column; /* Cambiar a columna */
+        align-items: center; /* Centrar logos */
+    }
+
+    .logo-item {
+        flex: 1 0 70%; /* Ajustar tamaño de los logos */
+        margin: 10px 0; /* Espaciado entre logos */
+    }
+
+    .iconos {
+        flex-direction: row; /* Cambiar a columna */
+        
+    }
+
+    .contact-box {
+        width: 90%; /* Ancho más estrecho */
+        margin: 1em auto; /* Centrar */
+    }
+
+    .btn-navbar {
+        margin: 10px 0; /* Añadir un margen superior e inferior */
+        width: 80%; /* Ajustar el ancho del botón */
+        text-align: center; /* Centrar el texto dentro del botón */
+    }
+}
+
+/* Para pantallas medianas */
+@media (min-width: 481px) and (max-width: 768px) {
+    .panel_navbar {
+        width: 80%; /* Ancho intermedio */
+        flex-direction: row; /* Volver a fila */
+    }
+
+    .logos-container {
+        flex-direction: row; /* Cambiar a fila */
+        flex-wrap: wrap; /* Permitir múltiples filas */
+    }
+
+    .logo-item {
+        flex: 1 0 45%; /* Ajustar tamaño de los logos */
+        margin: 10px; /* Espaciado entre logos */
+    }
+
+    .content-video-background h1 {
+        font-size: 2.5rem; /* Ajustar tamaño del título */
+    }
+
+    .content-video-background h2 {
+        font-size: 1.2rem; /* Ajustar tamaño del subtítulo */
+    }
+}
+
+/* Para pantallas grandes */
+@media (max-width: 769px) {
+    .panel_navbar {
+        width: 50%; /* Ancho más amplio */
+    }
+
+
+    .carousel-images {
+        gap: 10%; 
+        width: 100px; 
+    }
+    .logos-container {
+        flex-direction: row; /* Fila para pantallas grandes */
+    }
+
+    .logo-item {
+        flex: 1 0 30%; /* Ajustar tamaño de los logos */
+    }
+
+    .content-video-background h1 {
+        font-size: 3.5rem; /* Tamaño original del título */
+    }
+
+    .content-video-background h2 {
+        font-size: 1.5rem; /* Tamaño original del subtítulo */
+    }
+
 }
