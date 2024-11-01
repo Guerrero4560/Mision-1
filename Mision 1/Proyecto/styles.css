@@ -247,9 +247,35 @@
 .icon.instagram { background-color: #c32aa3; }
 .icon.linkedin { background-color: #0077b5; }
 
-.informacion p {
+.informacion div {
     margin: 0.5em 0;
 }
+.contact-box {
+    width: 400px; /* Ajusta según lo que necesites */
+    padding: 10px;
+    text-align: center;
+    border: 1px solid #ccc;
+    border-radius: 07px;
+    box-shadow: 2px 2px 8px #2b2b2b;
+    background-color: white;
+    font-size: 18px;
+    font-family: arial, sans-serif;
+}
+.contacto{
+    color: #c89116;
+    text-align: center;
+    font-size: 2rem;
+    font-weight: bold;
+}
+.contacto2{
+    
+    text-align: center;
+    font-size: 1rem;
+    
+}
+
+
+
 
 /* seccion de aliados */
 
@@ -262,6 +288,18 @@
 .alianzas {
     text-align: center;
     padding: 2em;
+}
+.fuente1{
+    color: #c89116;
+    text-align: center;
+    font-size: 2.5rem;
+    font-weight: bold;
+}
+.fuente2{
+    
+    text-align: center;
+    font-size: 1.5rem;
+    font-weight: bold;
 }
 
 /*footer*/
