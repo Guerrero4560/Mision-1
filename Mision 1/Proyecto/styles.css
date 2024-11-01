@@ -288,31 +288,33 @@
 
 /* seccion de aliados */
 
-.imagenes-aliados {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    margin: 1em 0;
-   
-}
-
-.alianzas {
-    text-align: center;
-    padding: 2em;
-}
-.fuente1{
-    color: #c89116;
-    text-align: center;
-    font-size: 2.5rem;
-    font-weight: bold;
-    margin-bottom: 1em;
-}
-.fuente2{
+    .imagenes-aliados {
+        display: flex;
+        justify-content: space-around;
+        flex-wrap: wrap;
+        margin: 1em 0;
     
-    text-align: center;
-    font-size: 1.5rem;
-    font-weight: bold;
-}
+    }
+
+    .alianzas {
+        text-align: center;
+        padding: 2em;
+    }
+    .fuente1{
+        color: #c89116;
+        text-align: center;
+        font-size: 2.5rem;
+        font-weight: bold;
+        margin-bottom: 1em;
+    }
+    .fuente2{
+        margin: 0.5em 0; /* Espacio arriba y abajo */
+        text-align: center;
+        font-size: 1.2rem;
+        font-weight: bold;
+
+        
+    }
 
 /*footer*/
 footer {
@@ -335,7 +337,10 @@ footer {
 .icon img {
     width: 100%; /* Asegura que la imagen ocupe todo el espacio del div */
     height: auto; /* Mantiene la proporción de la imagen */
+
 }
+
+
 
 @media (max-width: 480px) {
     
